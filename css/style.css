@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -6,6 +7,50 @@
 
 body {
   background-color: #292929;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+section .container {
+  display: inline-flex;
+}
+section .container .static-txt {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+section .container .dinamic-txts {
+  margin-left: 15px;
+}
+section .container li {
+  color: #fc6d6d;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
+}
+section .container li span {
+  position: relative;
+}
+section .container li span::after {
+  background-color: #292929;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #fc6d6d;
+  animation: tipeo 1.5s steps(10) infinite;
+}
+@keyframes tipeo {
+  100% {
+    left: 100%;
+    margin: 0 -35 0 35px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
