@@ -21,11 +21,22 @@ section
             font-weight: 400
         .dinamic-txts
             margin-left: 15px
+            line-height: 90px //Espacio entre renglones
+            height: 90px
+            //background: red
+            overflow: hidden
         li
             color: #fc6d6d
             list-style: none
             font-size: 60px
             font-weight: 500
+
+            position: relative
+            top: 0 
+            animation: deslizar 6s steps(4) infinite
+            @keyframes deslizar
+                100%
+                    top: -360px //Movemos el texto para arriba
             span
                 position: relative //Las barras ocupan solo el espacio del texto
                 &::after  //Contenido a la derecha
@@ -36,16 +47,8 @@ section
                     height: 100%
                     width: 100%
                     border-left: 2px solid #fc6d6d
-                    animation: tipeo 1.5s steps(10) infinite   //steps, largo del texto
+                    animation: tipeo 1.5s steps(10) infinite   //steps, 4 palabras
                     @keyframes tipeo
                         100%
-                            left: 100%
+                            left: 112% //Corregí el limite de carácteres que tenía
                             margin: 0 -35 0 35px
-
-
-
-
-
-
-    
-//aftetr //Contenido a la derecha

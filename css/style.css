@@ -26,12 +26,23 @@ section .container .static-txt {
 }
 section .container .dinamic-txts {
   margin-left: 15px;
+  line-height: 90px;
+  height: 90px;
+  overflow: hidden;
 }
 section .container li {
   color: #fc6d6d;
   list-style: none;
   font-size: 60px;
   font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: deslizar 6s steps(4) infinite;
+}
+@keyframes deslizar {
+  100% {
+    top: -360px;
+  }
 }
 section .container li span {
   position: relative;
@@ -48,7 +59,7 @@ section .container li span::after {
 }
 @keyframes tipeo {
   100% {
-    left: 100%;
+    left: 112%;
     margin: 0 -35 0 35px;
   }
 }
